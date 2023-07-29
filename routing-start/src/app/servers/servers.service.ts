@@ -17,10 +17,13 @@ export class ServersService {
     }
   ];
 
+  //called in servers
   getServers() {
     return this.servers;
   }
 
+
+    //called in server and updatre to access the name and status with the help of id
   getServer(id: number) {
     const server = this.servers.find(
       (s) => {

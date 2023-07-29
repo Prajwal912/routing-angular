@@ -20,11 +20,8 @@ export class EditServerComponent implements OnInit {
     this.serverName = this.server.name;
     this.serverStatus = this.server.status;
 
-    // this.route.params.subscribe((params) => {
-    //     this.server.id = params[serverId]
-    //     this.server.name = params[serverName]
-    //     this.server.status = params[serverStatus]
-    // })
+    this.route.queryParams.subscribe((queryParams) => {})
+    this.route.fragment.subscribe((fragment) => {})
   }
 
   onUpdateServer() {
