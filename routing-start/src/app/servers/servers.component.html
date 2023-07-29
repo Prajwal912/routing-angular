@@ -2,7 +2,7 @@
   <div class="col-xs-12 col-sm-4">
     <div class="list-group">
       <a
-      [routerLink]="['/servers', 23, 'edit-server']"
+      [routerLink]="['/servers', server.id]"
       [queryParams] = "{allowEdit:'1'}"
       fragment="loading"
         class="list-group-item"
@@ -15,7 +15,7 @@
     <button class="btn btn-default" (click)="onLoadServers()">reload</button>
     <app-edit-server></app-edit-server>
     <hr>
-    <app-server></app-server>
+    <!-- <app-server></app-server> -->
   </div>
 </div>
 

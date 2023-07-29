@@ -18,6 +18,7 @@ const appRoutes : Routes = [
   {path:'users', component: UsersComponent},
   {path:'users/:anyId/:anyName', component: UserComponent},
   {path:'servers', component: ServersComponent},
+  {path:'servers/:id', component: ServerComponent},
   {path:'servers/:id/edit-server', component: EditServerComponent},
 ]
 
