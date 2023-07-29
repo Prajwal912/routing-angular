@@ -15,11 +15,15 @@ import { RouterModule, Routes } from '@angular/router';
 
 const appRoutes : Routes = [
   {path:'', component: HomeComponent},
-  {path:'users', component: UsersComponent},
-  {path:'users/:anyId/:anyName', component: UserComponent},
-  {path:'servers', component: ServersComponent},
-  {path:'servers/:id', component: ServerComponent},
-  {path:'servers/:id/edit-server', component: EditServerComponent},
+  {path:'users', component: UsersComponent, children:[
+    {path:':anyId/:anyName', component: UserComponent},
+  ]},
+
+  {path:'servers', component: ServersComponent, children:[
+    {path:':id', component: ServerComponent},
+    {path:':id/edit-server', component: EditServerComponent},
+  ]},
+
 ]
 
 @NgModule({
