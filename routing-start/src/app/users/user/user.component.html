@@ -1,2 +1,6 @@
-<p>User with ID _ID_ loaded.</p>
-<p>User name is _NAME_</p>
+<p>User with ID {{user.id}} loaded.</p>
+<p>User name is {{user.name}}</p>
+
+<!-- when we click in the a tag thenit only changes the url not the page dynamically -->
+<!-- if we want to change the page dynamically then have to use the pamam. subscribe() -->
+<a [routerLink]="['/users', 10, 'Prajwal']">Load Prajwal 10</a>
